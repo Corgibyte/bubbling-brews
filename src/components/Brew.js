@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const rowStyle = {
   display: "grid",
   gridTemplateRows: "1fr",
-  gridTemplateColumns: "4fr 1fr"
+  gridTemplateColumns: "3fr 1fr"
 };
 
 const brewStyle = {

@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 function BrewList(props) {
   return (
     <React.Fragment>
-      <hr />
       {props.brewList.map((brew) =>
         <Brew
           whenBrewClicked={props.onBrewSelection}

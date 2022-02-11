@@ -8,6 +8,15 @@ const inputStyle = {
   border: "solid #8FBCBB 1px",
   borderRadius: "1rem",
   padding: "0.5rem",
+  margin: "0.5rem",
+  width: "45vw"
+};
+
+const buttonStyle = {
+  backgroundColor: "#4C566A",
+  color: "#A3BE8C",
+  fontSize: "1.5rem",
+  border: "1px solid #81A1C1",
   margin: "0.5rem"
 };
 
@@ -34,7 +43,7 @@ function ReusableForm(props) {
           <input style={inputStyle} type="number" name="price" placeholder="Vial Price" defaultValue={priceValue} />
           <input style={inputStyle} type="text" name="flavor" placeholder="Brew Flavor" defaultValue={flavorValue} />
         </div>
-        <button type="submit">{props.buttonText}</button>
+        <button type="submit" style={buttonStyle}>{props.buttonText}</button>
       </form>
     </React.Fragment>
   );

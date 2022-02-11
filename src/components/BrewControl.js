@@ -4,6 +4,14 @@ import BrewList from "./BrewList";
 import BrewDetail from "./BrewDetail";
 import EditBrewForm from "./EditBrewForm";
 
+const buttonStyle = {
+  backgroundColor: "#4C566A",
+  color: "#A3BE8C",
+  fontSize: "1.5rem",
+  border: "1px solid #81A1C1",
+  margin: "0.5rem"
+};
+
 class BrewControl extends React.Component {
   constructor(props) {
     super(props);
@@ -102,7 +110,7 @@ class BrewControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        {<button onClick={this.handleClick}>{buttonText}</button>}
+        {<button onClick={this.handleClick} style={buttonStyle}>{buttonText}</button>}
       </React.Fragment>
     );
   }
