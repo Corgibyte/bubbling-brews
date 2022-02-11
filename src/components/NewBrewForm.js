@@ -9,7 +9,7 @@ function NewBrewForm(props) {
     props.onNewBrewCreation({
       name: event.target.name.value,
       potionClass: event.target.potionClass.value,
-      price: event.target.price.value,
+      price: parseInt(event.target.price.value),
       flavor: event.target.flavor.value,
       vials: 97,
       id: v4()

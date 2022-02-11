@@ -10,7 +10,7 @@ function EditBrewForm(props) {
     props.onEditBrew({
       name: event.target.name.value,
       potionClass: event.target.potionClass.value,
-      price: event.target.price.value,
+      price: parseInt(event.target.price.value),
       flavor: event.target.flavor.value,
       vials: brew.vials,
       id: brew.id
