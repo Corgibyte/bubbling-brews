@@ -11,7 +11,7 @@ function NewBrewForm(props) {
       potionClass: event.target.potionClass.value,
       price: parseInt(event.target.price.value),
       flavor: event.target.flavor.value,
-      vials: 97,
+      vials: 7,
       id: v4()
     });
   }
