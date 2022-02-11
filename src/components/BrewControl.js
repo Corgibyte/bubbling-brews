@@ -45,7 +45,7 @@ class BrewControl extends React.Component {
 
   handleEditingBrewInList = (brewToEdit) => {
     const editedMainBrewList = this.state.mainBrewList
-      .filter(brew => brew.id !== this.state.selectedBrew.id)
+      .filter(brew => brew.id !== brewToEdit.id)
       .concat(brewToEdit);
     this.setState({
       mainBrewList: editedMainBrewList,
@@ -59,6 +59,18 @@ class BrewControl extends React.Component {
     this.setState({
       mainBrewList: newMainBrewList,
       selectedBrew: null
+    });
+  }
+
+  handleRemovingVialFromBrew = (id) => {
+    const selectedBrew = this.state.mainBrewList.filter(brew => brew.id === id)[0];
+    this.handleEditingBrewInList({
+      name: selectedBrew.name,
+      potionClass: selectedBrew.potionClass,
+      price: selectedBrew.price,
+      flavor: selectedBrew.flavor,
+      vials: selectedBrew.vials - 1,
+      id: selectedBrew.id
     });
   }
 
@@ -82,6 +94,7 @@ class BrewControl extends React.Component {
       buttonText = "Return to Brew List";
     } else {
       currentlyVisibleState = <BrewList
+        onBrewVialRemoval={this.handleRemovingVialFromBrew}
         brewList={this.state.mainBrewList}
         onBrewSelection={this.handleChangingSelectedBrew} />;
       buttonText = "Add Brew";

@@ -9,6 +9,7 @@ function BrewList(props) {
       {props.brewList.map((brew) =>
         <Brew
           whenBrewClicked={props.onBrewSelection}
+          whenBrewVialRemoved={props.onBrewVialRemoval}
           name={brew.name}
           potionClass={brew.potionClass}
           price={brew.price}
@@ -23,7 +24,8 @@ function BrewList(props) {
 
 BrewList.propTypes = {
   brewList: PropTypes.array,
-  onBrewSelection: PropTypes.func
+  onBrewSelection: PropTypes.func,
+  onBrewVialRemoval: PropTypes.func
 };
 
 export default BrewList;
