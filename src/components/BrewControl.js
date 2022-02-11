@@ -34,8 +34,9 @@ class BrewControl extends React.Component {
     this.setState({ mainBrewList: newMainBrewList, formVisibleOnPage: false });
   }
 
-  handleChangingSelectedBrew = () => {
-    this.setState({ editing: true });
+  handleChangingSelectedBrew = (id) => {
+    const selectedBrew = this.state.mainBrewList.filter(ticket => ticket.id === id)[0];
+    this.setState({ selectedBrew: selectedBrew });
   }
 
   handleEditClick = () => {
