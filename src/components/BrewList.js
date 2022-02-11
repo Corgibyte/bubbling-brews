@@ -22,7 +22,7 @@ function BrewList(props) {
 }
 
 BrewList.propTypes = {
-  brewList = PropTypes.array,
+  brewList: PropTypes.array,
   onBrewSelection: PropTypes.func
 };
 
