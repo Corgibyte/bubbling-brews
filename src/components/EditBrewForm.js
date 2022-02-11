@@ -6,7 +6,7 @@ function EditBrewForm(props) {
   const { brew } = props;
 
   function handleEditBrewFormSubmission(event) {
-    event.preventDeafult();
+    event.preventDefault();
     props.onEditBrew({
       name: event.target.name.value,
       potionClass: event.target.potionClass.value,
@@ -19,6 +19,7 @@ function EditBrewForm(props) {
 
   return (
     <ReusableForm
+      existingBrew={brew}
       formSubmissionHandler={handleEditBrewFormSubmission}
       buttonText="Update Brew" />
   );

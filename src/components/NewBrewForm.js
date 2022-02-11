@@ -18,6 +18,7 @@ function NewBrewForm(props) {
 
   return (
     <ReusableForm
+      existingBrew={null}
       formSubmissionHandler={handleNewBrewFormSubmission}
       buttonText="Add Brew" />
   );
