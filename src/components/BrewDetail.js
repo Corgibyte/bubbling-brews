@@ -18,7 +18,7 @@ function BrewDetail(props) {
   );
 }
 
-BrewDetails.propTypes = {
+BrewDetail.propTypes = {
   brew: PropTypes.object,
   onClickingDelete: PropTypes.func,
   onClickingEdit: PropTypes.func
