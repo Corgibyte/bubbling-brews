@@ -7,10 +7,10 @@ function BrewDetail(props) {
   return (
     <React.Fragment>
       <h2>Brew Details</h2>
-      <h3>{props.name}: {props.potionClass}</h3>
-      <h4>${props.price}</h4>
-      <h5>Flavor: {props.flavor}</h5>
-      <h6>{props.vials} vials remaining</h6>
+      <h3>{brew.name}: {brew.potionClass}</h3>
+      <h4>${brew.price}</h4>
+      <h5>Flavor: {brew.flavor}</h5>
+      <h6>{brew.vials} vials remaining</h6>
       <button onClick={props.onClickingEdit}>Update Brew</button>
       <button onClick={props.onClickingDelete}>Destroy Brew</button>
       <hr />
