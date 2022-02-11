@@ -17,32 +17,47 @@ const brewStyle = {
 
 const vialStyle = {
   textAlign: "center",
-  padding: "3rem 0"
+  paddingTop: "1.5rem"
 };
 
 const validVial = {
   color: "#88C0D0",
-  fontSize: "2rem",
+  fontSize: "1.5rem",
   verticalAlign: "center"
-}
+};
+
+const lowVial = {
+  color: "#EBCB8B",
+  fontSize: "1.5rem",
+  verticalAlign: "center"
+};
 
 const invalidVial = {
   color: "#BF616A",
-  fontSize: "2rem",
+  fontSize: "1.5rem",
   verticalAlign: "center"
-}
+};
 
 function Brew(props) {
   let vialRemoveState = null;
-  if (props.vials > 0) {
+  if (props.vials > 3) {
     vialRemoveState = (
       <div onClick={() => props.whenBrewVialRemoved(props.id)} style={{ ...brewStyle, ...vialStyle }}>
+        <p style={validVial}>{props.vials} vials left</p>
         <p style={validVial}>Remove Vial</p>
+      </div >
+    );
+  } else if (props.vials > 0) {
+    vialRemoveState = (
+      <div onClick={() => props.whenBrewVialRemoved(props.id)} style={{ ...brewStyle, ...vialStyle }}>
+        <p style={lowVial}>{props.vials} vials left</p>
+        <p style={lowVial}>Remove Vial</p>
       </div >
     );
   } else {
     vialRemoveState = (
       <div className="vial-removal invalid" style={{ ...brewStyle, ...vialStyle }}>
+        <p style={invalidVial}>No vials left</p>
         <p style={invalidVial}>Cauldron Empty</p>
       </div>
     );
@@ -54,7 +69,6 @@ function Brew(props) {
         <h3>{props.name}: {props.potionClass}</h3>
         <h4>${props.price}</h4>
         <h5>Flavor: {props.flavor}</h5>
-        <h6>{props.vials} vials remaining</h6>
       </div>
       {vialRemoveState}
     </div>
