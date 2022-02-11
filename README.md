@@ -37,6 +37,10 @@ This is a web application that showcases my ability to create a simple React web
 
 * None
 
+### React Component Diagram
+
+![Screenshot of React component diagram](./brews.io.png)
+
 ### License
 
 [Hippocratic License 3.0](https://github.com/Corgibyte/bubbling-brews/blob/main/LICENSE.md), Copyright 2022 Hannah Young.
