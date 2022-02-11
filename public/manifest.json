@@ -1,0 +1,8 @@
+{
+  "short_name": "Brews",
+  "name": "Bea's Bubbling Brews",  
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
