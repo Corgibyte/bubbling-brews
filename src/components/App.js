@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <Helmet>
         <style>{'body { background-color: #2E3440; color: #ECEFF4; }'}</style>
+        <title>{"Bea's Bubbling Brews"}</title>
       </Helmet>
       <Header />
       <BrewControl />
