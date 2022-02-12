@@ -51,6 +51,7 @@ class BrewControl extends React.Component {
     this.setState({ editing: true });
   }
 
+  //TODO: keep edited item from moving to end of list. I.e, sort list
   handleEditingBrewInList = (brewToEdit) => {
     const editedMainBrewList = this.state.mainBrewList
       .filter(brew => brew.id !== brewToEdit.id)
