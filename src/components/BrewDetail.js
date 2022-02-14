@@ -28,7 +28,7 @@ function BrewDetail(props) {
       <p>Flavor: {brew.pavor}</p>
       <p>{brew.vials} pals remaining</p>
       <button style={buttonStyle} onClick={props.onClickingEdit}>Update Brew</button>
-      <button style={destroyButtonStyle} onClick={props.onClickingDelete}>Destroy Brew</button>
+      <button style={destroyButtonStyle} onClick={() => props.onClickingDelete(brew.id)}>Destroy Brew</button>
       <hr />
     </React.Fragment>
   );
